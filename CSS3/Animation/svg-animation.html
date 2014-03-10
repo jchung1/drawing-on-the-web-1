@@ -3,26 +3,21 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>SVG Shapes</title>
+		<title>CSS3 Animation</title>
 		<style>
+			body {
+				background-image: url('images/enterprise.jpg');
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+
 			#container {
-				width: 550px;
+				width: 1000px;
 				height: 100%;
 				margin: auto;
-			}
+ 			}
 
-			#shapes {
-				height: 300px;
-				position: absolute;
-				top: 50%;
-				margin-top: -150px;
-				perspective: 600px;
-				-webkit-perspective: 600px;
-			}
-
-			rect {
-				fill: url(#gradient3);
-				opacity: 0.8;
+			#kirk {
 				transform-origin: 50% 50%;
 				-webkit-transform-origin: 50% 50%;
 				animation: appear 3s;
@@ -33,9 +28,7 @@
 				-webkit-animation-direction: alternate;
 			}
 
-			circle {
-				fill: url(#gradient1);
-				opacity: 0.8;
+			#spock {
 				transform-origin: 50% 50%;
 				-webkit-transform-origin: 50% 50%;
 				animation: appear 3s;
@@ -46,9 +39,7 @@
 				-webkit-animation-direction: alternate;
 			}
 
-			polygon {
-				fill: url(#gradient2);
-				opacity: 0.8;
+			#bones {
 				transform-origin: 50% 50%;
 				-webkit-transform-origin: 50% 50%;
 				animation: appear 3s;
@@ -74,40 +65,22 @@
 
 	<body>
 		<div id="container">
-			<div id="shapes">
-				<svg width="550" height="300">
-					<defs>
-						<linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-							<stop offset="0%" stop-color="cyan" />
-							<stop offset="100%" stop-color="yellow" />
-						</linearGradient>
-					</defs>
-					
-					<defs>
-						<linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-							<stop offset="0%" stop-color="magenta" />
-							<stop offset="100%" stop-color="cyan" />
-						</linearGradient>
-					</defs>
-					
-					<defs>
-						<linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-							<stop offset="0%" stop-color="yellow" />
-							<stop offset="100%" stop-color="magenta" />
-						</linearGradient>
-					</defs>
-
-					<!-- Square -->
-					<rect x="30" y="30" width="240" height="240" />
-					
-					<!-- Circle -->
-					<circle cx="270" cy="150" r="120" />
-					
-					<!-- Triangle -->
-					<polygon points="400,30 270,270 520,270" />
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1000px" height="450px" viewBox="0 0 300 450" style="enable-background:new 0 0 300 450;" xml:space="preserve">
+					<g id ="kirk">
+						<image style="overflow:visible;" x="0px" y="0px" width="300" height="450" xlink:href="images/kirk-head.png"  transform="matrix(0.9999 0 0 0.9999 0 0)">
+						</image>
+					</g>
+					<g id ="spock">
+						<image style="overflow:visible;" x="300px" y="0px" width="300" height="450" xlink:href="images/spock-head.png"  transform="matrix(0.9999 0 0 0.9999 0 0)">
+						</image>
+					</g>
+					<g id ="bones">
+						<image style="overflow:visible;"  x="-300px" y="0px" width="300" height="450" xlink:href="images/bones-head.png"  transform="matrix(0.9999 0 0 0.9999 0 0)">
+						</image>
+					</g>
 				</svg>
-			</div>
 		</div>
+	<embed src="WNOHGB.mp3" autostart="TRUE" hidden="TRUE"></embed>
 	</body>
 
 </html>
